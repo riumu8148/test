@@ -3,4 +3,4 @@
 
 extern FILE *fp;
 
-void throw_darts(int ,char*[]);
+void throw_darts(char*[]);
