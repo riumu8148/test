@@ -1,3 +1,6 @@
 #pragma once
+#include<stdio.h>
 
-void throw_darts(int ,char*[]);
+extern FILE *fp;
+
+void throw_darts(char*[]);
