@@ -2,23 +2,24 @@
 #include"managescore.h"
 #include "game.h"
 
+int sum[EIGHT];
 extern FILE* fp;
 
 void printscore(Game box[],int size){
     for(int i=0;i<size;i++){
-        printf("%dゲーム %d\n",i,box[i]);
+        printf("%dゲーム %d\n",i,sum[i]);
     }
 }
 
 void add_score(Game box[],int size){
     //そのフレームのスコア計算
     for(int i=0;i<size;i++){
-        box[i].score=box[i].throw_number[0]+box[i].throw_number[1]+box[i].throw_number[2];
+        sum[i]=box[i].score[0]+box[i].score[1]+box[i].score[2];
     }
 
     //前のフレームのスコアを足させて合計点を出力
     for(int i=1;i<size;i++){
-        box[i].score=box[i].score+box[i-1].score;
+        sum[i]=sum[i]+sum[i-1];
     }
 }
 
@@ -29,7 +30,7 @@ void outputscore(Game box[],int size){
         exit(EXIT_FAILURE);
     }
     for(int i=1;i<size;i++){
-        fprintf(fp,"%d",box[i].score);
+        fprintf(fp,"%d",sum[i]);
     }
     fclose(fp);
 }
