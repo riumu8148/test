@@ -5,6 +5,7 @@
 
 typedef struct game{
     int score[3];
+    int score;
     int throw_number[3];
     int frame;
 }Game;

@@ -1,6 +1,7 @@
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>
+#include"game.h"
 
-int sum;
+extern FILE* fp;
 extern Game box[8];
