@@ -4,7 +4,7 @@ extern FILE *fp;
 extern Game box[8];
 char charscore[1024];
 
-void throw(char *inputfile)
+void throwdarts(const char *inputfile)
 {
     int i = 0;
 
@@ -16,12 +16,12 @@ void throw(char *inputfile)
     while (fgets(charscore, sizeof(charscore), fp) != NULL)
     {
         int j = 0;
-        char *check = strtok(charscore, ',');
+        char *check = strtok(charscore, ",");
         while (check != NULL)
         {
             box[i].score[j] = atoi(check);
-            box[i].frame = atoi(i);
-            strtok(NULL, ',');
+            box[i].frame = i;
+            strtok(NULL, ",");
             j++;
         }
         i++;
