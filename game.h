@@ -10,7 +10,7 @@ typedef struct game{
 }Game;
 
 void add_score(Game box[], int size);
-void printcore(Game box[], int size);
+void printscore(Game box[], int size);
 void outputscore(Game box[], int size);
 void throwdarts(const char *filename);
-void startgame(void);
+//void startgame(void);
