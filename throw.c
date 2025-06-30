@@ -7,7 +7,6 @@ char charscore[1024];
 void throwdarts(const char *inputfile)
 {
     int i = 0;
-
     if ((fp = fopen(inputfile, "r")) == NULL)
     {
         printf("読み込みファイルなし");
@@ -21,7 +20,7 @@ void throwdarts(const char *inputfile)
         {
             box[i].score[j] = atoi(check);
             box[i].frame = i;
-            strtok(NULL, ",");
+            check = strtok(NULL, ",");
             j++;
         }
         i++;
