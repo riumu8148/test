@@ -1,4 +1,4 @@
-#include"game.h"
+#include "game.h"
 Game box[8];
 FILE *fp = NULL;
 
