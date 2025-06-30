@@ -1,6 +1,7 @@
 #pragma once
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 void add_score(Game box[], int size);
 void printcore(Game box[], int size);
