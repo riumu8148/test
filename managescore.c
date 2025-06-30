@@ -6,12 +6,14 @@ int sum[8];
 extern FILE* fp;
 
 void printscore(Game box[],int size){
+    printf("aabb");
     for(int i=0;i<size;i++){
         printf("%dゲーム %d\n",i,sum[i]);
     }
 }
 
 void add_score(Game box[],int size){
+    printf("cccc");
     //そのフレームのスコア計算
     for(int i=0;i<size;i++){
         sum[i]=box[i].score[0]+box[i].score[1]+box[i].score[2];
@@ -24,6 +26,7 @@ void add_score(Game box[],int size){
 }
 
 void outputscore(Game box[],int size){
+    printf("aaaa");
     if((fp = fopen("ffasf.txt","w"))==NULL)
     {
         perror("fopen");
