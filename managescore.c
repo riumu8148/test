@@ -2,7 +2,7 @@
 #include"managescore.h"
 #include "game.h"
 
-int sum[EIGHT];
+int sum[8];
 extern FILE* fp;
 
 void printscore(Game box[],int size){
