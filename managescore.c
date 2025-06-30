@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include"managescore.h"
+#include "game.h"
 
 extern FILE* fp;
 
