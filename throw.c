@@ -2,7 +2,7 @@
 
 extern FILE *fp;
 extern Game box[8];
-char check[1024];
+char charscore[1024];
 
 void throw(char *inputfile)
 {
@@ -13,10 +13,10 @@ void throw(char *inputfile)
         printf("読み込みファイルなし");
         exit(1);
     }
-    while (fgets(check, sizeof(check), fp) != NULL)
+    while (fgets(charscore, sizeof(charscore), fp) != NULL)
     {
         int j = 0;
-        strtok(check, ',');
+        char *check = strtok(charscore, ',');
         while (check != NULL)
         {
             box[i].score[j] = atoi(check);
